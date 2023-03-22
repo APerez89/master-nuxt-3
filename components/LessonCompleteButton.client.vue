@@ -9,7 +9,7 @@
     <input
       type="checkbox"
       :value="modelValue"
-      @input="() => $emitt('update:modelValue', !modelValue)"
+      @input="() => $emit('update:modelValue', !modelValue)"
       class="hidden"
     />
     {{ modelValue ? 'Completed!' : 'Mark as complete' }}

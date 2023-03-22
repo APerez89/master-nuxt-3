@@ -104,10 +104,11 @@ useHead({
 const progress = useLocalStorage('progress', []);
 
 const isLessonComplete = computed(() => {
+  // Check if chapter exists
   if (!progress.value[chapter.value.number - 1]) {
     return false;
   }
-  
+  // Check if lesson exists
   if (
     !progress.value[chapter.value.number - 1][
       lesson.value.number - 1
@@ -122,6 +123,7 @@ const isLessonComplete = computed(() => {
 });
 
 const toggleComplete = () => {
+  // Check if chapter exists, if not it creates the array
   if (!progress.value[chapter.value.number - 1]) {
     progress.value[chapter.value.number - 1] = [];
   }
