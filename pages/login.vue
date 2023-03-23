@@ -7,6 +7,12 @@
     >
       Log in with Github
     </button>
+    <NuxtLink
+      class="underline font-medium block mt-2"
+      href="/"
+    >
+      Go Home
+    </NuxtLink>
   </div>
 </template>
 

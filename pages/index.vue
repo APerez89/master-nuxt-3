@@ -4,15 +4,15 @@
       Heller, World!
     </h1>
 
-    <!-- <NuxtLink
+    <NuxtLink
       class="underline font-medium"
       :href="firstLesson.path"
     >
       Go to first lesson
-    </NuxtLink> -->
+    </NuxtLink>
   </div>
 </template>
 
 <script setup lang="ts">
-// const firstLesson = useFirstLesson();
+const firstLesson = useFirstLesson();
 </script>
