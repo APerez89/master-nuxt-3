@@ -38,6 +38,8 @@
 <script setup>
 const course = useCourse();
 const route = useRoute();
+const { chapterSlug, lessonSlug } = route.params;
+const lesson = await useLesson(chapterSlug, lessonSlug);
 
 definePageMeta({
   // Middleware is what runs every time a user is trying to navigate to a path within the app.
@@ -85,11 +87,6 @@ const chapter = computed(() => {
   );
 });
 
-const lesson = computed(() => {
-  return chapter.value.lessons.find(
-    (lesson) => lesson.slug === route.params.lessonSlug
-  );
-});
 
 const title = computed(() => {
   return `${lesson.value.title} - ${course.title}`;

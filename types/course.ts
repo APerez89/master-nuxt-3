@@ -10,7 +10,7 @@ export type Lesson = {
 
 export type LessonWithPath = Lesson & {
   path: string;
-}
+};
 
 export type Chapter = {
   title: string;

@@ -1,4 +1,4 @@
-import { Lesson, LessonWithPath, Chapter, Course } from '~/types/course';
+import {  Chapter, Course, Lesson, LessonWithPath } from '~/types/course';
 import course from '~/server/courseData';
 
 course as Course;
